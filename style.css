@@ -4,6 +4,7 @@
 }
 
 #torre1 {
+    border-radius: 5px;
     margin-right: 120px;
     display: flex; 
     flex-direction: column-reverse; 
@@ -15,6 +16,7 @@
 }
 
 #torre2 {
+    border-radius: 5px;
     margin-right: 120px;
     width: 20px;
     height: 200px;
@@ -23,6 +25,7 @@
 }
 
 #torre3 {
+    border-radius: 5px;
     width: 20px;
     height: 200px;
     background-color: black;
@@ -30,6 +33,7 @@
 }
 
 #disco1 {
+    border: 1px solid black;
     background-color: red;
     width: 100px;
     height: 20px;
@@ -37,6 +41,7 @@
 }
 
 #disco2 {
+    border: 1px solid black;
     display: flex;
     flex-direction: column-reverse;
     background-color: blue;
@@ -46,6 +51,7 @@
 }
 
 #disco3 {
+    border: 1px solid black;
     display: flex;
     flex-direction: column-reverse;
     background-color: yellow;
@@ -55,6 +61,7 @@
 }
 
 #disco4 {
+    border: 1px solid black;
     display: flex;
     flex-direction: column-reverse;
     background-color: green;

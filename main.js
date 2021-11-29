@@ -39,19 +39,7 @@ torre1.appendChild(disco4)
 //torre 3
 
 
-let arrtorre1 = [disco1, disco2, disco3, disco4];
-let arrtorre2 = [];
-let arrtorre3 = [];
 
-let store = [];
-
-let aplicar = store.push();
-
-torre1.addEventListener('click', function (){
-    let remove = arrtorre1.indexOf(addEventListener())
-    let aplicar = store.push(addEventListener());
-    
-})
 
 
 
