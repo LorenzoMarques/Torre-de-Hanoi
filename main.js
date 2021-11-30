@@ -2,15 +2,18 @@ let jogo = document.getElementById("jogo")
 let torre1 = document.createElement("div")
 let torre2 = document.createElement("div")
 let torre3 = document.createElement("div")
-let botao = document.createElement("button"
+let botao = document.createElement("button")
+let contador = document.createElement("div")
 
-)
 torre1.id = "torre1"
 torre2.id = "torre2"
 torre3.id = "torre3"
 botao.id = "reset"
+contador.id = "contador"
 
-botao.innerHTML = "Reset"
+
+
+botao.innerText = "Reset"
 
 //store
 let aStore = document.getElementById("store")
@@ -21,6 +24,7 @@ jogo.appendChild(torre1)
 jogo.appendChild(torre2)
 jogo.appendChild(torre3)
 jogo.appendChild(botao)
+jogo.appendChild(contador)
 
 
 let disco1 = document.createElement("div")
@@ -117,13 +121,15 @@ let jogadas = 0;
 
 function jogando () {
   if(jogadas >= 15){       
-      alert('Jogadas Terminaram');  
-      document.location.reload(true);   
-      return false;
+    alert('Jogadas Terminaram');  
+    document.location.reload(true);   
+    return false;
   }
   
-  jogadas++;
-
-  console.log('Você está usando a função pela ' + jogadas + ' vez');
+    jogadas++;
+    contador.innerText = `${15-jogadas} Jogadas restantes`
+    console.log('Você está usando a função pela ' + jogadas + ' vez');
   
 }
+
+
