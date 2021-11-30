@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Comforter+Brush&display=swap');
+
 #jogo {
     display: flex;
     background-color: rgb(194, 193, 193);
@@ -95,3 +97,15 @@
     margin-bottom: 400px;
     border-radius: 5px;
 }
+
+#reset {
+    color: white;
+    background-color: black;
+    border: 1px solid gray;
+    box-shadow: 2px 2px 5px 1px rgb(70, 70, 70);
+    border-radius: 5px;
+    margin-bottom: 28%;
+    width: 50px;
+    height: 30px;
+}
+
