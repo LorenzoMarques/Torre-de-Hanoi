@@ -28,49 +28,63 @@ let disco2 = document.createElement("div")
 let disco3 = document.createElement("div")
 let disco4 = document.createElement("div")
 torre1.addEventListener("click", function(){
-    if(store.length === 0)
-    {store.push(currentContidionTower1.pop()) &&
+    if(store.length === 0 && torre1.lastChild !== null)
+    store.push(currentContidionTower1.pop()) &&
     aStore.appendChild(torre1.lastChild)
-    
-}   
-    else {
+    else if (store[0] < currentContidionTower1[currentContidionTower1.length -1] ||
+        currentContidionTower1[0] === undefined)
+    {
         currentContidionTower1.push(store.pop()) &&
-        torre1.appendChild(aStore.lastChild)
+        torre1.appendChild(aStore.lastChild) &&
         jogando()
+
     }
     
 })
 torre2.addEventListener("click", function(){
-    if(store.length === 0)
+    if(store.length === 0 && torre2.lastChild !== null)
     {store.push(currentContidionTower2.pop()) &&
     aStore.appendChild(torre2.lastChild)
     
 }
-   else{
-        currentContidionTower2.push(store.pop()) &&
-        torre2.appendChild(aStore.lastChild)
-        jogando()
-    }
+else if(store.length === 0) {
     
+}
+
+else if (store[0] < currentContidionTower2[currentContidionTower2.length -1] ||
+    currentContidionTower2[0] === undefined)
+{
+        currentContidionTower2.push(store.pop()) &&
+        torre2.appendChild(aStore.lastChild) &&
+        jogando()
+
+    }
+    vitoria()
 })
 torre3.addEventListener("click", function(){
-    if(store.length === 0)
+    if(store.length === 0 && torre3.lastChild !== null)
     {store.push(currentContidionTower3.pop()) &&
-    aStore.appendChild(torre3.lastChild)
-    
-}
+    aStore.appendChild(torre3.lastChild)}
 
-   else{
+    else if(store.length === 0) {
+    
+    }
+
+    else if (store[0] < currentContidionTower3[currentContidionTower3.length -1] ||
+        currentContidionTower3[0] === undefined)
+    {
         currentContidionTower3.push(store.pop()) &&
-        torre3.appendChild(aStore.lastChild)
+        torre3.appendChild(aStore.lastChild) 
         jogando()
-}
-}) 
 
-botao.addEventListener('click', function(){
-    return 
-    
+    }
+    vitoria()
 })
+
+botao.addEventListener("click", function(){
+    document.location.reload(true);
+})
+
 
 disco1.id = "disco1"
 disco2.id = "disco2"
@@ -94,14 +108,17 @@ let winCondition = [4,3,2,1]
 function vitoria() {
     if (winCondition.every((item, index) =>item === currentContidionTower2[index]) === true
     || winCondition.every((item, index) =>item === currentContidionTower3[index]) === true)
-    {return alert("Vitória")}
+    {window.alert("Vitória");
 }
+}
+
 
 let jogadas = 0;
 
 function jogando () {
-  if(jogadas >= 15){
-      alert('Jogadas Terminaram');
+  if(jogadas >= 15){       
+      alert('Jogadas Terminaram');  
+      document.location.reload(true);   
       return false;
   }
   
@@ -110,6 +127,3 @@ function jogando () {
   console.log('Você está usando a função pela ' + jogadas + ' vez');
   
 }
-
-
-
