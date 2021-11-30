@@ -21,35 +21,43 @@ let disco3 = document.createElement("div")
 let disco4 = document.createElement("div")
 torre1.addEventListener("click", function(){
     if(store.length === 0)
-    store.push(currentContidionTower1.pop()) &&
+    {store.push(currentContidionTower1.pop()) &&
     aStore.appendChild(torre1.lastChild)
+    this.onclick = jogando()
+}   
     else {
         currentContidionTower1.push(store.pop()) &&
         torre1.appendChild(aStore.lastChild)
-
+        
     }
+    
 })
 torre2.addEventListener("click", function(){
     if(store.length === 0)
     {store.push(currentContidionTower2.pop()) &&
     aStore.appendChild(torre2.lastChild)
+    this.onclick = jogando()
 }
     else {
         currentContidionTower2.push(store.pop()) &&
         torre2.appendChild(aStore.lastChild)
 
     }
+    
 })
 torre3.addEventListener("click", function(){
     if(store.length === 0)
-    store.push(currentContidionTower2.pop()) &&
+    {store.push(currentContidionTower3.pop()) &&
     aStore.appendChild(torre3.lastChild)
+    this.onclick = jogando()
+}
 
     else {
         currentContidionTower3.push(store.pop()) &&
         torre3.appendChild(aStore.lastChild)
-
+        
     }
+    
 })
 disco1.id = "disco1"
 disco2.id = "disco2"
@@ -73,6 +81,22 @@ let winCondition = [disco1,disco2,disco3,disco4]
 function vitoria() {
     if (winCondition.every((item, index) =>item === currentContidionTower2[index]) === true
     || winCondition.every((item, index) =>item === currentContidionTower3[index]) === true)
-    {return "Vitória"}
-    else {return "Derrota"}
+    {return alert("Vitória")}
 }
+
+let jogadas = 0;
+
+function jogando () {
+  if(jogadas >= 15){
+      alert('Jogadas Terminaram');
+      return false;
+  }
+  
+  jogadas++;
+
+  console.log('Você está usando a função pela ' + jogadas + ' vez');
+  
+}
+
+
+
