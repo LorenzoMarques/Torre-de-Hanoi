@@ -20,36 +20,54 @@ let disco2 = document.createElement("div")
 let disco3 = document.createElement("div")
 let disco4 = document.createElement("div")
 torre1.addEventListener("click", function(){
-    if(store.length === 0)
+    if(store.length === 0 && torre1.lastChild !== null)
     store.push(currentContidionTower1.pop()) &&
     aStore.appendChild(torre1.lastChild)
-    else {
+    else if (store[0] < currentContidionTower1[currentContidionTower1.length -1] ||
+        currentContidionTower1[0] === undefined)
+    {
         currentContidionTower1.push(store.pop()) &&
-        torre1.appendChild(aStore.lastChild)
+        torre1.appendChild(aStore.lastChild) &&
+        jogando()
 
     }
 })
 torre2.addEventListener("click", function(){
-    if(store.length === 0)
+    if(store.length === 0 && torre2.lastChild !== null)
     {store.push(currentContidionTower2.pop()) &&
     aStore.appendChild(torre2.lastChild)
 }
-    else {
+else if(store.length === 0) {
+    
+}
+
+else if (store[0] < currentContidionTower2[currentContidionTower2.length -1] ||
+    currentContidionTower2[0] === undefined)
+{
         currentContidionTower2.push(store.pop()) &&
-        torre2.appendChild(aStore.lastChild)
+        torre2.appendChild(aStore.lastChild) &&
+        jogando()
 
     }
+    vitoria()
 })
 torre3.addEventListener("click", function(){
-    if(store.length === 0)
-    store.push(currentContidionTower2.pop()) &&
-    aStore.appendChild(torre3.lastChild)
+    if(store.length === 0 && torre3.lastChild !== null)
+    {store.push(currentContidionTower3.pop()) &&
+    aStore.appendChild(torre3.lastChild)}
 
-    else {
+    else if(store.length === 0) {
+    
+    }
+
+    else if (store[0] < currentContidionTower3[currentContidionTower3.length -1] ||
+        currentContidionTower3[0] === undefined)
+    {
         currentContidionTower3.push(store.pop()) &&
-        torre3.appendChild(aStore.lastChild)
+        torre3.appendChild(aStore.lastChild) 
 
     }
+    vitoria()
 })
 disco1.id = "disco1"
 disco2.id = "disco2"
@@ -64,15 +82,29 @@ torre1.appendChild(disco4)
 //torre 1
 
 
-let currentContidionTower1 = [disco1,disco2,disco3,disco4]
+let currentContidionTower1 = [4,3,2,1]
 let currentContidionTower2 = []
 let currentContidionTower3 = []
 
-let winCondition = [disco1,disco2,disco3,disco4]
+let winCondition = [4,3,2,1]
 
 function vitoria() {
     if (winCondition.every((item, index) =>item === currentContidionTower2[index]) === true
     || winCondition.every((item, index) =>item === currentContidionTower3[index]) === true)
-    {return "Vitória"}
-    else {return "Derrota"}
+    {window.alert("Vitória");
+}
+}
+
+let jogadas = 0;
+
+function jogando () {
+  if(jogadas >= 15){
+      alert('Jogadas Terminaram');
+      return false;
+  }
+  
+  jogadas++;
+
+  console.log('Você está usando a função pela ' + jogadas + ' vez');
+  
 }
