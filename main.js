@@ -2,9 +2,17 @@ let jogo = document.getElementById("jogo")
 let torre1 = document.createElement("div")
 let torre2 = document.createElement("div")
 let torre3 = document.createElement("div")
+let botao = document.createElement("button")
+let contador = document.createElement("div")
 torre1.id = "torre1"
 torre2.id = "torre2"
 torre3.id = "torre3"
+botao.id = "reset"
+contador.id = "contador"
+
+
+
+botao.innerText = "Reset"
 
 //store
 let aStore = document.getElementById("store")
@@ -14,6 +22,8 @@ let store = []
 jogo.appendChild(torre1)
 jogo.appendChild(torre2)
 jogo.appendChild(torre3)
+jogo.appendChild(botao)
+jogo.appendChild(contador)
 
 let disco1 = document.createElement("div")
 let disco2 = document.createElement("div")
@@ -61,10 +71,16 @@ torre3.addEventListener("click", function(){
     {
         currentContidionTower3.push(store.pop()) &&
         torre3.appendChild(aStore.lastChild) 
+        jogando()
 
     }
     vitoria()
 })
+
+botao.addEventListener("click", function(){
+    document.location.reload(true);
+})
+
 disco1.id = "disco1"
 disco2.id = "disco2"
 disco3.id = "disco3"
@@ -84,23 +100,26 @@ let currentContidionTower3 = []
 
 let winCondition = [4,3,2,1]
 
+let vencedor = document.getElementById("vencedor")
+
 function vitoria() {
     if (winCondition.every((item, index) =>item === currentContidionTower2[index]) === true
     || winCondition.every((item, index) =>item === currentContidionTower3[index]) === true)
-    {window.alert("Vitória");
+    {vencedor.style.visibility = "unset";
 }
 }
 
-let jogadas = 0;
+let jogadas = 15;
 
 function jogando () {
-  if(jogadas >= 15){
-      alert('Jogadas Terminaram');
-      return false;
+  if(jogadas <= 0){       
+    alert('Jogadas Terminaram');  
+    document.location.reload(true);   
+    return false;
   }
   
-  jogadas++;
-
-  console.log('Você está usando a função pela ' + jogadas + ' vez');
+    jogadas--;
+    contador.innerText = `${jogadas} Jogadas restantes`
+    console.log('Você está usando a função pela ' + jogadas + ' vez');
   
 }
