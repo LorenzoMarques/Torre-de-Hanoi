@@ -132,6 +132,7 @@ height: 168px;
     position: absolute;
     width: 100%;
     top: 20%;
+    visibility: hidden;
 }
 
 #vencedor h1 {
