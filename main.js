@@ -117,17 +117,17 @@ function vitoria() {
 }
 
 
-let jogadas = 0;
+let jogadas = 15;
 
 function jogando () {
-  if(jogadas >= 15){       
+  if(jogadas <= 0){       
     alert('Jogadas Terminaram');  
     document.location.reload(true);   
     return false;
   }
   
-    jogadas++;
-    contador.innerText = `${15-jogadas} Jogadas restantes`
+    jogadas--;
+    contador.innerText = `${jogadas} Jogadas restantes`
     console.log('Você está usando a função pela ' + jogadas + ' vez');
   
 }
