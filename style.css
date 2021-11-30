@@ -139,3 +139,9 @@ height: 168px;
    padding-top: 10%;
     font-style: oblique;
 }
+
+@media (min-width: 700px) {
+    #vencedor {
+        font-size: 150px;
+    }
+}
