@@ -23,8 +23,10 @@ torre1.addEventListener("click", function(){
     if(store.length === 0 && torre1.lastChild !== null)
     store.push(currentContidionTower1.pop()) &&
     aStore.appendChild(torre1.lastChild)
+
+    
     else if (store[0] < currentContidionTower1[currentContidionTower1.length -1] ||
-        currentContidionTower1[0] === undefined)
+        currentContidionTower1[0] === undefined && aStore.lastChild !== null)
     {
         currentContidionTower1.push(store.pop()) &&
         torre1.appendChild(aStore.lastChild) &&
@@ -37,12 +39,10 @@ torre2.addEventListener("click", function(){
     {store.push(currentContidionTower2.pop()) &&
     aStore.appendChild(torre2.lastChild)
 }
-else if(store.length === 0) {
-    
-}
+
 
 else if (store[0] < currentContidionTower2[currentContidionTower2.length -1] ||
-    currentContidionTower2[0] === undefined)
+    currentContidionTower2[0] === undefined && aStore.lastChild !== null)
 {
         currentContidionTower2.push(store.pop()) &&
         torre2.appendChild(aStore.lastChild) &&
@@ -56,12 +56,8 @@ torre3.addEventListener("click", function(){
     {store.push(currentContidionTower3.pop()) &&
     aStore.appendChild(torre3.lastChild)}
 
-    else if(store.length === 0) {
-    
-    }
-
-    else if (store[0] < currentContidionTower3[currentContidionTower3.length -1] ||
-        currentContidionTower3[0] === undefined)
+    else if (store[0] < currentContidionTower3[currentContidionTower3.length -1]||
+        currentContidionTower3[0] === undefined && aStore.lastChild !== null)
     {
         currentContidionTower3.push(store.pop()) &&
         torre3.appendChild(aStore.lastChild) 
