@@ -12,8 +12,8 @@
             alt="Torre de hanoi example."
             rel="noopener noreferrer"
           />
-          <figcaption>Exemplo: Torre de hanoi.</figcaption>
           </a>
+          <figcaption>Exemplo: Torre de hanoi.</figcaption>
         </figure>
         </section>
         <h2>Tarefa</h2>
