@@ -35,4 +35,3 @@
             <p>Nenhum disco pode ser colocado no topo de um disco menor.</p>
           </li>
         </ol>
-        <p>Lembre-se de fazer o planejamento da entrega, seja pelo notion ou trello como foi demostrado em aulas anteriores.</p>
