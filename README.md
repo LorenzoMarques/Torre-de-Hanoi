@@ -15,18 +15,6 @@
           <figcaption>Exemplo: Torre de hanoi.</figcaption>
           </a>
         </figure>
-        <p>Vocês trabalharão em duplas para criar uma versão JavaScript de uma Torre de Hanoi.</p>
-        <p>O envio deve ser o trabalho realizado por você e seu colega - (não copiem a solução escrita por outra pessoa).</p>
-        <section class="hilightedContet hilightedContet--warning">
-          <header>
-            <strong>Aviso!</strong>
-          </header>
-          <p>
-            Esta entrega é <strong>HARD DEADLINE</strong>, ou seja, se você não
-            submetê-la até o prazo de entrega, você NÃO poderá enviar após a
-            data de entrega. Reveja atentamente no fim da entrega o seu tempo
-            limite. Qualquer dúvida chame o seu <strong>Facilitador</strong>.
-          </p>
         </section>
         <h2>Tarefa</h2>
         <p>
