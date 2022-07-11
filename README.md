@@ -2,6 +2,9 @@
         <h1>Torre de hanoi.</h1>
         <h2>Introdução.</h2>
         <p>A Torre de Hanoi é um quebra-cabeças que consiste de três varetas e um número de discos de diferentes tamanhos que podem ser encaixados em qualquer                vareta. O jogo começa com todos os discos empilhados em uma vareta, do maior (embaixo) para o menor (no topo).</p>
+        <h2>
+          <strong>Clique na imagem para ver a aplicação funcionando</strong>
+        /h2>
         <figure>
           <a href = "https://lorenzomarques.github.io/m2-entrega-torre-de-hanoi-sprint-1a-LorenzoMarques/">
             <img
@@ -11,7 +14,6 @@
           />
           <figcaption>Exemplo: Torre de hanoi.</figcaption>
           </a>
-
         </figure>
         <p>Vocês trabalharão em duplas para criar uma versão JavaScript de uma Torre de Hanoi.</p>
         <p>O envio deve ser o trabalho realizado por você e seu colega - (não copiem a solução escrita por outra pessoa).</p>
