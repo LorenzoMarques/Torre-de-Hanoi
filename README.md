@@ -6,7 +6,7 @@
           <strong>Clique na imagem para ver a aplicação funcionando</strong>
         </h2>
         <figure>
-          <a href = "https://lorenzomarques.github.io/m2-entrega-torre-de-hanoi-sprint-1a-LorenzoMarques/">
+          <a href = "https://lorenzomarques.github.io/Torre-de-Hanoi//">
             <img
             src="https://kenzie-academy-brasil.gitlab.io/fullstack/frontend/modulo1/sprint4/img/torre-de-hanoi-example.png"
             alt="Torre de hanoi example."
